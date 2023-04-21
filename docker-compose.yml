@@ -10,17 +10,17 @@
 version: "3.9"
 
 services:
+
   transmission:
     container_name: transmission
     image: linuxserver/transmission:latest
-    networks:
-      - mynetwork
+    
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
-      - USER=admin
-      - PASS=nimdatx
+      - USER=dockerel
+      - PASS=dockerel
 
     ports:
       - 9091:9091
@@ -32,27 +32,45 @@ services:
       - tx-watch:/watch
     restart: "unless-stopped"
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`transmission.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=9091"
+    networks:
+      - medianet
+
+  ###########################
   radarr:
     container_name: radarr
     image: linuxserver/radarr:latest
-    networks:
-      - mynetwork
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=UTC
-    ports:
-      - 7878:7878
     volumes:
       - radarr-config:/config
       - torrent-downloads:/downloads
-    restart: "unless-stopped"
+    ports:
+      - 7878:7878
+    restart: unless-stopped
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`radarr.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=7878"
+
+    networks:
+      - medianet
+
+  ###########################
   sonarr:
     image: linuxserver/sonarr:latest
     container_name: sonarr
-    networks:
-      - mynetwork
+    
     environment:
       - PUID=1000
       - PGID=1000
@@ -64,11 +82,21 @@ services:
       - 8989:8989
     restart: unless-stopped
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`sonarr.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=8989"
+
+    networks:
+      - medianet
+
+  ###########################
   jackett:
     container_name: jackett
     image: linuxserver/jackett:latest
-    networks:
-      - mynetwork
+    
     environment:
       - PUID=1000
       - PGID=1000
@@ -80,11 +108,21 @@ services:
       - 9117:9117
     restart: unless-stopped
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`jackett.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=9117"
+
+    networks:
+      - medianet
+
+  ###########################
   prowlarr:
     container_name: prowlarr
     image: linuxserver/prowlarr:latest
-    networks:
-      - mynetwork
+    
     environment:
       - PUID=1000
       - PGID=1000
@@ -95,11 +133,21 @@ services:
       - 9696:9696
     restart: unless-stopped
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`prowlarr.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=9696"
+
+    networks:
+      - medianet
+
+  ###########################
   jellyfin:
     image: linuxserver/jellyfin:latest
     container_name: jellyfin
-    networks:
-      - mynetwork
+    
     environment:
       - PUID=1000
       - PGID=1000
@@ -113,28 +161,48 @@ services:
       - 8096:8096
       - 7359:7359/udp
       - 8920:8920
-    restart: unless-stopped
 
+    # Trafik redirect
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.transmission.rule=Host(`jellyfin.localhost`)"
+      - "traefik.http.routers.transmission.entrypoints=web"
+      - "traefik.http.services.transmission.loadbalancer.server.port=8096"
+
+    restart: unless-stopped
+    networks:
+      - medianet
+
+  ###########################
   traefik:
     image: traefik:latest
     container_name: traefik
     command:
-      - --entrypoints.http.address=:80
-      - --providers.docker=true
-      - --api=true
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
     ports:
       - 80:80
+      - "8080:8080" # The Web UI (enabled by --api)
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - medianet
+
   ###########################
   whoami:
-    image: containous/whoami
+    image: "traefik/whoami"
+    container_name: "simple-service"
     labels:
-      - traefik.http.routers.https.rule=Host(`${DOMAIN}`)
-      - traefik.http.routers.https.entrypoints=https
-      - traefik.http.routers.https.tls=true
-      - traefik.http.routers.https.tls.certresolver=${CERT_RESOLVER}
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.localhost`)"
+      - "traefik.http.routers.whoami.entrypoints=web"
  
+networks:
+  medianet:
+    external: true
 
 volumes:
   torrent-downloads:
@@ -147,6 +215,3 @@ volumes:
   tx-config:
   tx-watch:
 
-networks:
-  mynetwork:
-    external: true
