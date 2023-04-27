@@ -27,9 +27,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./jellyfin/config:/config
-      - movies:/movies
-      - series:/series
-      - anime:/anime
+      - ./downloads/movies:/movies
+      - ./downloads/series:/series
+      - ./downloads/anime:/anime
       - ./downloads:/downloads
     labels:
       - "traefik.enable=true"
