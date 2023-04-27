@@ -30,3 +30,13 @@ services:
         - "traefik.http.routers.showdown.rule=Host(`showdown.localhost`)"
         - "traefik.http.routers.showdown.entrypoints=web"
         - "traefik.http.services.showdown.loadbalancer.server.port=8000"
+    ########################
+    csgo:
+      image: cm2network/csgo
+      container_name: csgo
+      restart: unless-stopped
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.csgo.rule=Host(`csgo.localhost`)"
+        - "traefik.http.routers.csgo.entrypoints=web"
+        - "traefik.http.services.csgo.loadbalancer.server.port=8000"
