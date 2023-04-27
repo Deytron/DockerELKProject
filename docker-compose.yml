@@ -28,9 +28,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./jellyfin/config:/config
-      - ./movies:/movies
-      - ./series:/series
-      - ./anime:/anime
+      - movies:/movies
+      - series:/series
+      - anime:/anime
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.jellyfin.rule=Host(`stream.localhost`)"
@@ -69,8 +69,8 @@ services:
       - TZ=America/New_York
     volumes:
       - ./sonarr/config:/config
-      - ./series:/series
-      - ./anime:/anime
+      - series:/series
+      - anime:/anime
       - all-downloads:/downloads
     ports:
       - 8989:8989
@@ -93,7 +93,7 @@ services:
       - TZ=America/New_York
     volumes:
       - ./radarr/config:/config
-      - ./movies:/movies
+      - movies:/movies
       - all-downloads:/downloads
     labels:
       - "traefik.enable=true"
@@ -159,19 +159,17 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
-    volumes:
-      - ./lidarr/config:/config
-      - ./lidarr/downloads:/downloads
-      - ./lidarr/music:/music
-      - all-downloads:/downloads
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.lidarr.rule=Host(`lidarr.localhost`)"
-      - "traefik.http.routers.lidarr.entrypoints=web"
-      - "traefik.http.services.lidarr.loadbalancer.server.port=8686"
+      - "traefik.http.routers.showdown.rule=Host(`showdown.localhost`)"
+      - "traefik.http.routers.showdown.entrypoints=web"
+      - "traefik.http.services.showdown.loadbalancer.server.port=8000"
     depends_on:
       - prowlarr
     restart: unless-stopped
 
 volumes:
   all-downloads:
+  anime:
+  series:
+  movies:

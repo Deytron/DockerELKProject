@@ -3468,3 +3468,11 @@
 2023-04-27 04:33:17.7|Info|ReleaseSearchService|Searching indexers for [The Dark Knight]. 0 active indexers
 2023-04-27 04:33:17.7|Info|DownloadDecisionMaker|No results found
 2023-04-27 04:33:17.7|Info|MovieSearchService|Movie search completed. 0 reports downloaded.
+2023-04-27 04:38:48.8|Info|ConsoleApp|Exiting main.
+2023-04-27 04:38:54.0|Info|Bootstrap|Starting Radarr - /app/radarr/bin/Radarr - Version 4.4.4.7068
+2023-04-27 04:38:54.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.4|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/radarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:55.3|Info|CommandExecutor|Starting 2 threads for tasks.

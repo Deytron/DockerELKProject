@@ -1402,3 +1402,11 @@
 2023-04-27 04:30:53.5|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Hell's Paradise] for Season / Episode:[S01E04], Offset: 0, Limit: 100, Categories: [5000]
 2023-04-27 04:30:53.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E04&f=0&c=0_0&s=id&o=desc
 2023-04-27 04:30:55.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E04&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:38:48.7|Info|ConsoleApp|Exiting main.
+2023-04-27 04:38:54.0|Info|Bootstrap|Starting Prowlarr - /app/prowlarr/bin/Prowlarr - Version 1.3.2.3006
+2023-04-27 04:38:54.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.4|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:55.1|Info|CommandExecutor|Starting 3 threads for tasks.

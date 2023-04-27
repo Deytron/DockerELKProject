@@ -782,3 +782,23 @@
  -- Path: Folder is not writable by user abc
 2023-04-27 04:36:57.1|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
  -- Path: Folder is not writable by user abc
+2023-04-27 04:37:44.6|Info|Bootstrap|Starting Sonarr - /app/sonarr/bin/Sonarr.exe - Version 3.0.10.1567
+2023-04-27 04:37:44.8|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:37:44.9|Info|Router|Application mode: Interactive
+2023-04-27 04:37:45.0|Info|MigrationLogger|*** Checking database for required migrations data source=/config/sonarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:37:45.1|Info|MigrationLogger|*** Checking database for required migrations data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:37:45.2|Info|OwinHostController|Listening on the following URLs:
+2023-04-27 04:37:45.2|Info|OwinHostController|  http://*:8989/
+2023-04-27 04:37:45.6|Info|SonarrBootstrapper|Starting Web Server
+2023-04-27 04:38:39.2|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Folder is not writable by user abc
+2023-04-27 04:38:53.8|Info|Bootstrap|Starting Sonarr - /app/sonarr/bin/Sonarr.exe - Version 3.0.10.1567
+2023-04-27 04:38:54.1|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.2|Info|Router|Application mode: Interactive
+2023-04-27 04:38:54.3|Info|MigrationLogger|*** Checking database for required migrations data source=/config/sonarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:54.4|Info|MigrationLogger|*** Checking database for required migrations data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:54.5|Info|OwinHostController|Listening on the following URLs:
+2023-04-27 04:38:54.5|Info|OwinHostController|  http://*:8989/
+2023-04-27 04:38:54.9|Info|SonarrBootstrapper|Starting Web Server
+2023-04-27 04:39:28.5|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Folder is not writable by user abc

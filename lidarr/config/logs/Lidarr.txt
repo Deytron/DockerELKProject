@@ -2509,3 +2509,9 @@
 2023-04-27 04:26:09.3|Warn|FetchAndParseRssService|No available indexers. check your configuration.
 2023-04-27 04:26:09.3|Info|DownloadDecisionMaker|No results found
 2023-04-27 04:26:09.3|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:38:48.7|Info|ConsoleApp|Exiting main.
+2023-04-27 04:38:54.0|Info|Bootstrap|Starting Lidarr - /app/lidarr/bin/Lidarr.dll - Version 1.1.4.3027
+2023-04-27 04:38:54.0|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/lidarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
