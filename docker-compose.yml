@@ -30,7 +30,7 @@ services:
       - movies:/movies
       - series:/series
       - anime:/anime
-      - all-downloads:/downloads
+      - ./downloads:/downloads
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.jellyfin.rule=Host(`stream.localhost`)"
@@ -69,9 +69,7 @@ services:
       - TZ=America/New_York
     volumes:
       - ./sonarr/config:/config
-      - series:/series
-      - anime:/anime
-      - all-downloads:/downloads
+      - ./downloads:/downloads
     ports:
       - 8989:8989
     depends_on:
@@ -93,8 +91,7 @@ services:
       - TZ=America/New_York
     volumes:
       - ./radarr/config:/config
-      - movies:/movies
-      - all-downloads:/downloads
+      - ./downloads:/downloads
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.radarr.rule=Host(`radarr.localhost`)"
@@ -114,9 +111,7 @@ services:
       - TZ=America/New_York
     volumes:
       - ./lidarr/config:/config
-      - ./lidarr/downloads:/downloads
-      - ./lidarr/music:/music
-      - all-downloads:/downloads
+      - ./downloads:/downloads
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.lidarr.rule=Host(`lidarr.localhost`)"
@@ -139,7 +134,7 @@ services:
     volumes:
       - ./transmission/config:/config
       - ./transmission/torrents:/torrents
-      - all-downloads:/downloads
+      - ./downloads:/downloads
     ports:
       - 9091:9091
       - 51413:51413
@@ -169,7 +164,6 @@ services:
   #   restart: unless-stopped
 
 volumes:
-  all-downloads:
   anime:
   series:
   movies:
