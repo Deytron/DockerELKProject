@@ -1,0 +1,180 @@
+/videos/a8ba497d-fa46-100b-7fd4-95c8a86bdb7a/hls1/main/0.ts
+
+{"Protocol":0,"Id":"a8ba497dfa46100b7fd495c8a86bdb7a","Path":"/downloads/complete/[LostYears] Hell\u0027s Paradise - S01E01 (WEB 1080p HEVC AAC E-AC-3) [5D029736].mkv","EncoderPath":null,"EncoderProtocol":null,"Type":0,"Container":"mkv,webm","Size":2289832369,"Name":"[LostYears] Hell\u0027s Paradise - S01E01 (WEB 1080p HEVC AAC E-AC-3) [5D029736]","IsRemote":false,"ETag":"59cd90121844d2e32a717f2577998a0a","RunTimeTicks":14651320000,"ReadAtNativeFramerate":false,"IgnoreDts":false,"IgnoreIndex":false,"GenPtsInput":false,"SupportsTranscoding":true,"SupportsDirectStream":true,"SupportsDirectPlay":true,"IsInfiniteStream":false,"RequiresOpening":false,"OpenToken":null,"RequiresClosing":false,"LiveStreamId":null,"BufferMs":null,"RequiresLooping":false,"SupportsProbing":true,"VideoType":0,"IsoType":null,"Video3DFormat":null,"MediaStreams":[{"Codec":"hevc","CodecTag":null,"Language":"jpn","ColorRange":null,"ColorSpace":"bt709","ColorTransfer":"bt709","ColorPrimaries":"bt709","DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":"[Nirvana]","VideoRange":"SDR","VideoRangeType":"SDR","VideoDoViTitle":null,"LocalizedUndefined":null,"LocalizedDefault":null,"LocalizedForced":null,"LocalizedExternal":null,"DisplayTitle":"[Nirvana] - 1080p - HEVC - SDR","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":12503077,"BitDepth":10,"RefFrames":1,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"Height":1080,"Width":1920,"AverageFrameRate":23.976025,"RealFrameRate":23.976025,"Profile":"Main 10","Type":1,"AspectRatio":"16:9","Index":0,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":"yuv420p10le","Level":120,"IsAnamorphic":null},{"Codec":"aac","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":"2.0 AAC","VideoRange":null,"VideoRangeType":null,"VideoDoViTitle":null,"LocalizedUndefined":null,"LocalizedDefault":null,"LocalizedForced":null,"LocalizedExternal":null,"DisplayTitle":"2.0 AAC - English - Stereo - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":"stereo","BitRate":128000,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":2,"SampleRate":44100,"IsDefault":true,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":"LC","Type":0,"AspectRatio":null,"Index":1,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"eac3","CodecTag":null,"Language":"jpn","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":"2.0 E-AC-3","VideoRange":null,"VideoRangeType":null,"VideoDoViTitle":null,"LocalizedUndefined":null,"LocalizedDefault":null,"LocalizedForced":null,"LocalizedExternal":null,"DisplayTitle":"2.0 E-AC-3 - Japanese - Dolby Digital\u002B - Stereo","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":"stereo","BitRate":224000,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":2,"SampleRate":48000,"IsDefault":false,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":0,"AspectRatio":null,"Index":2,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"ass","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":"Signs \u0026 Songs","VideoRange":null,"VideoRangeType":null,"VideoDoViTitle":null,"LocalizedUndefined":"Non d\u00E9fini","LocalizedDefault":"Par d\u00E9faut","LocalizedForced":"Forc\u00E9","LocalizedExternal":"External","DisplayTitle":"Signs \u0026 Songs - English - Par d\u00E9faut - Forc\u00E9 - ASS","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":true,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":3,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"ass","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":"Dialogue [Nirvana]","VideoRange":null,"VideoRangeType":null,"VideoDoViTitle":null,"LocalizedUndefined":"Non d\u00E9fini","LocalizedDefault":"Par d\u00E9faut","LocalizedForced":"Forc\u00E9","LocalizedExternal":"External","DisplayTitle":"Dialogue [Nirvana] - English - ASS","NalLengthSize":null,"IsInterlaced":false,"IsAVC":null,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":4,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null}],"MediaAttachments":[{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":5,"FileName":"Andine.otf","MimeType":"font/otf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":6,"FileName":"AveriaLibre-Regular.ttf","MimeType":"font/ttf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":7,"FileName":"BrushStrokes.ttf","MimeType":"font/ttf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":8,"FileName":"GandhiSans-Bold.otf","MimeType":"font/otf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":9,"FileName":"GandhiSans-BoldItalic.otf","MimeType":"font/otf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":10,"FileName":"Gupter-Medium.ttf","MimeType":"font/ttf","DeliveryUrl":null},{"Codec":null,"CodecTag":"[0][0][0][0]","Comment":null,"Index":11,"FileName":"Philosopher-Regular.ttf","MimeType":"font/ttf","DeliveryUrl":null}],"Formats":[],"Bitrate":12855077,"Timestamp":null,"RequiredHttpHeaders":{},"TranscodingUrl":null,"TranscodingSubProtocol":null,"TranscodingContainer":null,"AnalyzeDurationMs":null,"DefaultAudioStreamIndex":null,"DefaultSubtitleStreamIndex":null}
+
+/usr/lib/jellyfin-ffmpeg/ffmpeg -analyzeduration 200M -f matroska,webm -autorotate 0 -i file:"/downloads/complete/[LostYears] Hell's Paradise - S01E01 (WEB 1080p HEVC AAC E-AC-3) [5D029736].mkv" -map_metadata -1 -map_chapters -1 -threads 0 -map 0:0 -map 0:1 -map -0:s -codec:v:0 libx264 -preset veryfast -crf 23 -maxrate 12503077 -bufsize 25006154 -x264opts:0 subme=0:me_range=4:rc_lookahead=10:me=dia:no_chroma_me:8x8dct=0:partitions=none -force_key_frames:0 "expr:gte(t,0+n_forced*3)" -sc_threshold:v:0 0 -vf "setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709,scale=trunc(min(max(iw\,ih*a)\,min(1920\,1080*a))/2)*2:trunc(min(max(iw/a\,ih)\,min(1920/a\,1080))/2)*2,format=yuv420p" -codec:a:0 copy -copyts -avoid_negative_ts disabled -max_muxing_queue_size 2048 -f hls -max_delay 5000000 -hls_time 3 -hls_segment_type mpegts -start_number 0 -hls_segment_filename "/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f2%d.ts" -hls_playlist_type vod -hls_list_size 0 -y "/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f2.m3u8"
+
+
+ffmpeg version 5.1.3-Jellyfin Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.3.0-1ubuntu1~22.04)
+  configuration: --prefix=/usr/lib/jellyfin-ffmpeg --target-os=linux --extra-libs=-lfftw3f --extra-version=Jellyfin --disable-doc --disable-ffplay --disable-ptx-compression --disable-static --disable-libxcb --disable-sdl2 --disable-xlib --enable-lto --enable-gpl --enable-version3 --enable-shared --enable-gmp --enable-gnutls --enable-chromaprint --enable-libdrm --enable-libass --enable-libfreetype --enable-libfribidi --enable-libfontconfig --enable-libbluray --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libopenmpt --enable-libdav1d --enable-libwebp --enable-libvpx --enable-libx264 --enable-libx265 --enable-libzvbi --enable-libzimg --enable-libfdk-aac --arch=amd64 --enable-libsvtav1 --enable-libshaderc --enable-libplacebo --enable-vulkan --enable-opencl --enable-vaapi --enable-amf --enable-libmfx --enable-ffnvcodec --enable-cuda --enable-cuda-llvm --enable-cuvid --enable-nvdec --enable-nvenc
+  libavutil      57. 28.100 / 57. 28.100
+  libavcodec     59. 37.100 / 59. 37.100
+  libavformat    59. 27.100 / 59. 27.100
+  libavdevice    59.  7.100 / 59.  7.100
+  libavfilter     8. 44.100 /  8. 44.100
+  libswscale      6.  7.100 /  6.  7.100
+  libswresample   4.  7.100 /  4.  7.100
+  libpostproc    56.  6.100 / 56.  6.100
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 5 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 6 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 7 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 8 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 9 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 10 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+[matroska,webm @ 0x563f588388c0] Could not find codec parameters for stream 11 (Attachment: none): unknown codec
+Consider increasing the value for the 'analyzeduration' (200000000) and 'probesize' (5000000) options
+Input #0, matroska,webm, from 'file:/downloads/complete/[LostYears] Hell's Paradise - S01E01 (WEB 1080p HEVC AAC E-AC-3) [5D029736].mkv':
+  Metadata:
+    title           : [LostYears] Hell's Paradise / Jigokuraku - 01
+    encoder         : libebml v1.4.4 + libmatroska v1.7.1
+    creation_time   : 2023-04-15T21:26:03.000000Z
+  Duration: 00:24:25.13, start: 0.000000, bitrate: 12503 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 15.015000
+      Metadata:
+        title           : Intro
+    Chapter #0:1: start 15.015000, end 100.726000
+      Metadata:
+        title           : Prologue
+    Chapter #0:2: start 100.726000, end 191.024000
+      Metadata:
+        title           : Opening
+    Chapter #0:3: start 191.024000, end 1375.082000
+      Metadata:
+        title           : Episode
+    Chapter #0:4: start 1375.082000, end 1465.132000
+      Metadata:
+        title           : Ending
+  Stream #0:0(jpn): Video: hevc (Main 10), yuv420p10le(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], 23.98 fps, 23.98 tbr, 1k tbn (default)
+    Metadata:
+      title           : [Nirvana]
+      BPS             : 11982877
+      DURATION        : 00:24:25.047000000
+      NUMBER_OF_FRAMES: 35126
+      NUMBER_OF_BYTES : 2194434898
+      _STATISTICS_WRITING_APP: mkvmerge v74.0.0 ('You Oughta Know') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2023-04-15 21:26:03
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:1(eng): Audio: aac (LC), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      title           : 2.0 AAC
+      BPS             : 128000
+      DURATION        : 00:24:25.132000000
+      NUMBER_OF_FRAMES: 63098
+      NUMBER_OF_BYTES : 23442124
+      _STATISTICS_WRITING_APP: mkvmerge v74.0.0 ('You Oughta Know') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2023-04-15 21:26:03
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:2(jpn): Audio: eac3, 48000 Hz, stereo, fltp, 224 kb/s
+    Metadata:
+      title           : 2.0 E-AC-3
+      BPS             : 224000
+      DURATION        : 00:24:25.024000000
+      NUMBER_OF_FRAMES: 45782
+      NUMBER_OF_BYTES : 41020672
+      _STATISTICS_WRITING_APP: mkvmerge v74.0.0 ('You Oughta Know') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2023-04-15 21:26:03
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:3(eng): Subtitle: ass (default) (forced)
+    Metadata:
+      title           : Signs & Songs
+      BPS             : 77889
+      DURATION        : 00:24:24.400000000
+      NUMBER_OF_FRAMES: 14300
+      NUMBER_OF_BYTES : 14257745
+      _STATISTICS_WRITING_APP: mkvmerge v74.0.0 ('You Oughta Know') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2023-04-15 21:26:03
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:4(eng): Subtitle: ass
+    Metadata:
+      title           : Dialogue [Nirvana]
+      BPS             : 78009
+      DURATION        : 00:24:24.400000000
+      NUMBER_OF_FRAMES: 14621
+      NUMBER_OF_BYTES : 14279686
+      _STATISTICS_WRITING_APP: mkvmerge v74.0.0 ('You Oughta Know') 64-bit
+      _STATISTICS_WRITING_DATE_UTC: 2023-04-15 21:26:03
+      _STATISTICS_TAGS: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:5: Attachment: none
+    Metadata:
+      filename        : Andine.otf
+      mimetype        : font/otf
+  Stream #0:6: Attachment: none
+    Metadata:
+      filename        : AveriaLibre-Regular.ttf
+      mimetype        : font/ttf
+  Stream #0:7: Attachment: none
+    Metadata:
+      filename        : BrushStrokes.ttf
+      mimetype        : font/ttf
+  Stream #0:8: Attachment: none
+    Metadata:
+      filename        : GandhiSans-Bold.otf
+      mimetype        : font/otf
+  Stream #0:9: Attachment: none
+    Metadata:
+      filename        : GandhiSans-BoldItalic.otf
+      mimetype        : font/otf
+  Stream #0:10: Attachment: none
+    Metadata:
+      filename        : Gupter-Medium.ttf
+      mimetype        : font/ttf
+  Stream #0:11: Attachment: none
+    Metadata:
+      filename        : Philosopher-Regular.ttf
+      mimetype        : font/ttf
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+[libx264 @ 0x563f589ecf40] using SAR=1/1
+[libx264 @ 0x563f589ecf40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x563f589ecf40] profile Main, level 4.1, 4:2:0, 8-bit
+[libx264 @ 0x563f589ecf40] 264 - core 163 r3060 5db6aa6 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x1:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=4 chroma_me=0 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=23 scenecut=0 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 vbv_maxrate=12503 vbv_bufsize=25006 crf_max=0.0 nal_hrd=none filler=0 ip_ratio=1.40 aq=1:1.00
+Output #0, hls, to '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f2.m3u8':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Stream #0:0: Video: h264, yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 23.98 fps, 90k tbn (default)
+    Metadata:
+      encoder         : Lavc59.37.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 12503000/0/0 buffer size: 25006000 vbv_delay: N/A
+  Stream #0:1: Audio: aac (LC), 44100 Hz, stereo, fltp (default)
+frame=    1 fps=0.0 q=0.0 size=N/A time=00:00:00.00 bitrate=N/A speed=   0x    
+frame=   37 fps=0.0 q=0.0 size=N/A time=00:00:01.67 bitrate=N/A speed=2.89x    
+frame=  106 fps= 98 q=28.0 size=N/A time=00:00:04.50 bitrate=N/A speed=4.15x    
+[hls @ 0x563f589ee580] Opening '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f20.ts' for writing
+frame=  175 fps=110 q=28.0 size=N/A time=00:00:07.29 bitrate=N/A speed=4.59x    
+[hls @ 0x563f589ee580] Opening '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f21.ts' for writing
+frame=  211 fps= 98 q=28.0 size=N/A time=00:00:08.77 bitrate=N/A speed=4.08x    
+frame=  250 fps= 94 q=28.0 size=N/A time=00:00:10.47 bitrate=N/A speed=3.94x    
+[hls @ 0x563f589ee580] Opening '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f22.ts' for writing
+frame=  280 fps= 88 q=28.0 size=N/A time=00:00:11.65 bitrate=N/A speed=3.66x    
+frame=  293 fps= 79 q=28.0 size=N/A time=00:00:12.19 bitrate=N/A speed=3.28x    
+
+[q] command received. Exiting.
+
+[hls @ 0x563f589ee580] Opening '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f23.ts' for writing
+[hls @ 0x563f589ee580] Opening '/config/data/transcodes/53650a5c89e17bc6ca5c193da11ca7f24.ts' for writing
+frame=  304 fps= 75 q=-1.0 Lsize=N/A time=00:00:12.86 bitrate=N/A speed=3.18x    
+video:6974kB audio:212kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[libx264 @ 0x563f589ecf40] frame I:5     Avg QP:18.38  size: 52017
+[libx264 @ 0x563f589ecf40] frame P:131   Avg QP:22.55  size: 40800
+[libx264 @ 0x563f589ecf40] frame B:168   Avg QP:24.20  size:  9140
+[libx264 @ 0x563f589ecf40] consecutive B-frames: 15.1% 28.9% 13.8% 42.1%
+[libx264 @ 0x563f589ecf40] mb I  I16..4: 75.6%  0.0% 24.4%
+[libx264 @ 0x563f589ecf40] mb P  I16..4: 50.6%  0.0%  0.0%  P16..4: 22.4%  0.0%  0.0%  0.0%  0.0%    skip:27.0%
+[libx264 @ 0x563f589ecf40] mb B  I16..4:  4.0%  0.0%  0.0%  B16..8: 14.4%  0.0%  0.0%  direct: 5.3%  skip:76.2%  L0:38.1% L1:49.0% BI:12.9%
+[libx264 @ 0x563f589ecf40] coded y,uvDC,uvAC intra: 22.3% 24.2% 5.2% inter: 8.7% 8.6% 0.2%
+[libx264 @ 0x563f589ecf40] i16 v,h,dc,p: 38% 35% 11% 15%
+[libx264 @ 0x563f589ecf40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 21% 13% 13%  5%  7%  8%  7%  8%
+[libx264 @ 0x563f589ecf40] i8c dc,h,v,p: 59% 23% 13%  4%
+[libx264 @ 0x563f589ecf40] Weighted P-Frames: Y:14.5% UV:8.4%
+[libx264 @ 0x563f589ecf40] kb/s:4505.25

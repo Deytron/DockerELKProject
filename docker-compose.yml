@@ -31,6 +31,7 @@ services:
       - movies:/movies
       - series:/series
       - anime:/anime
+      - all-downloads:/downloads
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.jellyfin.rule=Host(`stream.localhost`)"

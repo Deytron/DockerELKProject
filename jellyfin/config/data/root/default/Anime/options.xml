@@ -6,7 +6,7 @@
   <ExtractChapterImagesDuringLibraryScan>false</ExtractChapterImagesDuringLibraryScan>
   <PathInfos>
     <MediaPathInfo>
-      <Path>/anime</Path>
+      <Path>/downloads</Path>
     </MediaPathInfo>
   </PathInfos>
   <SaveLocalMetadata>false</SaveLocalMetadata>
@@ -23,7 +23,9 @@
     <string>Nfo</string>
   </LocalMetadataReaderOrder>
   <DisabledSubtitleFetchers />
-  <SubtitleFetcherOrder />
+  <SubtitleFetcherOrder>
+    <string>Open Subtitles</string>
+  </SubtitleFetcherOrder>
   <SkipSubtitlesIfEmbeddedSubtitlesPresent>false</SkipSubtitlesIfEmbeddedSubtitlesPresent>
   <SkipSubtitlesIfAudioTrackMatches>false</SkipSubtitlesIfAudioTrackMatches>
   <SubtitleDownloadLanguages />
