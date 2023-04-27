@@ -7,8 +7,8 @@
   <SslPort>6969</SslPort>
   <EnableSsl>False</EnableSsl>
   <LaunchBrowser>True</LaunchBrowser>
-  <ApiKey>6ec37442232546fb9c4afc9f883ce4e2</ApiKey>
-  <AuthenticationMethod>Basic</AuthenticationMethod>
+  <ApiKey>d651f3c5fd2e4bfab18badc91516106b</ApiKey>
+  <AuthenticationMethod>Forms</AuthenticationMethod>
   <AuthenticationRequired>Enabled</AuthenticationRequired>
   <Branch>master</Branch>
   <SslCertPath></SslCertPath>

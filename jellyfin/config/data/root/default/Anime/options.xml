@@ -6,7 +6,7 @@
   <ExtractChapterImagesDuringLibraryScan>false</ExtractChapterImagesDuringLibraryScan>
   <PathInfos>
     <MediaPathInfo>
-      <Path>/downloads</Path>
+      <Path>/downloads/anime</Path>
     </MediaPathInfo>
   </PathInfos>
   <SaveLocalMetadata>false</SaveLocalMetadata>
@@ -14,8 +14,8 @@
   <EnableEmbeddedTitles>false</EnableEmbeddedTitles>
   <EnableEmbeddedEpisodeInfos>false</EnableEmbeddedEpisodeInfos>
   <AutomaticRefreshIntervalDays>0</AutomaticRefreshIntervalDays>
-  <PreferredMetadataLanguage />
-  <MetadataCountryCode />
+  <PreferredMetadataLanguage>fr</PreferredMetadataLanguage>
+  <MetadataCountryCode>FR</MetadataCountryCode>
   <SeasonZeroDisplayName>Specials</SeasonZeroDisplayName>
   <MetadataSavers />
   <DisabledLocalMetadataReaders />
@@ -23,9 +23,7 @@
     <string>Nfo</string>
   </LocalMetadataReaderOrder>
   <DisabledSubtitleFetchers />
-  <SubtitleFetcherOrder>
-    <string>Open Subtitles</string>
-  </SubtitleFetcherOrder>
+  <SubtitleFetcherOrder />
   <SkipSubtitlesIfEmbeddedSubtitlesPresent>false</SkipSubtitlesIfEmbeddedSubtitlesPresent>
   <SkipSubtitlesIfAudioTrackMatches>false</SkipSubtitlesIfAudioTrackMatches>
   <SubtitleDownloadLanguages />
