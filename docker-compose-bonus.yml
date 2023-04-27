@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    command:
+      - --api.insecure=true
+      - --providers.docker=true
+      - --entrypoints.web.address=:80
+    ports:
+      - 80:80
+      - 8080:8080
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.myrouter.entrypoints=web"
+      - "traefik.http.services.myservice.loadbalancer.server.port=80"
+    restart: unless-stopped
+
+    ########################
+    showdown:
+      image: voidmonkey/pokemon-showdown
+      container_name: showdown
+      restart: unless-stopped
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.showdown.rule=Host(`showdown.localhost`)"
+        - "traefik.http.routers.showdown.entrypoints=web"
+        - "traefik.http.services.showdown.loadbalancer.server.port=8000"
