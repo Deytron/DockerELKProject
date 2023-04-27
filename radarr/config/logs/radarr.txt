@@ -3415,3 +3415,56 @@
 2023-04-27 03:19:07.0|Info|MigrationController|*** Migrating data source=/config/radarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 03:19:07.2|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 03:19:08.1|Info|CommandExecutor|Starting 2 threads for tasks.
+2023-04-27 04:11:09.1|Info|RssSyncService|Starting RSS Sync
+2023-04-27 04:11:09.1|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 04:11:09.1|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:11:09.1|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:32:59.6|Error|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+
+[v4.4.4.7068] FluentValidation.ValidationException: Validation failed: 
+ -- Path: Invalid Path
+ -- RootFolderPath: Invalid Path
+   at Radarr.Http.REST.RestController`1.ValidateResource(TResource resource, Boolean skipValidate, Boolean skipSharedValidate) in D:\a\1\s\src\Radarr.Http\REST\RestController.cs:line 119
+   at Radarr.Http.REST.RestController`1.OnActionExecuting(ActionExecutingContext context) in D:\a\1\s\src\Radarr.Http\REST\RestController.cs:line 78
+   at Microsoft.AspNetCore.Mvc.Controller.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Radarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Radarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Radarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Radarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\StartingUpMiddleware.cs:line 41
+   at Radarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Radarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Radarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:32:59.7|Warn|RadarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Invalid Path
+ -- RootFolderPath: Invalid Path
+2023-04-27 04:33:06.5|Info|AddMovieService|Adding Movie [The Dark Knight (2008)][tt0468569, 155] Path: [/downloads/The Dark Knight (2008)]
+2023-04-27 04:33:06.6|Info|RefreshMovieService|Updating info for The Dark Knight
+2023-04-27 04:33:06.6|Warn|MediaCoverMapper|File /config/MediaCover/1/poster.jpg not found
+2023-04-27 04:33:07.9|Info|AddMovieCollectionService|Adding Collection The Dark Knight Collection[263]
+2023-04-27 04:33:08.0|Info|RefreshCollectionService|Updating info for The Dark Knight Collection
+2023-04-27 04:33:08.0|Info|MediaCoverService|Downloading Poster for [The Dark Knight (2008)][tt0468569, 155] https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg
+2023-04-27 04:33:08.1|Info|DiskScanService|Scanning disk for The Dark Knight
+2023-04-27 04:33:08.1|Info|DiskScanService|Completed scanning disk for The Dark Knight
+2023-04-27 04:33:08.1|Info|MovieScannedHandler|[The Dark Knight] was recently added, performing post-add actions
+2023-04-27 04:33:08.1|Info|MetadataService|Movie folder does not exist, skipping metadata creation
+2023-04-27 04:33:08.1|Info|ReleaseSearchService|Searching indexers for [The Dark Knight]. 0 active indexers
+2023-04-27 04:33:08.1|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:33:08.1|Info|MovieSearchService|Movie search completed. 0 reports downloaded.
+2023-04-27 04:33:10.7|Info|MediaCoverService|Downloading Fanart for [The Dark Knight (2008)][tt0468569, 155] https://image.tmdb.org/t/p/original/dqK9Hag1054tghRQSqLSfrkvQnA.jpg
+2023-04-27 04:33:13.6|Info|MetadataService|Movie folder does not exist, skipping metadata image creation
+2023-04-27 04:33:17.7|Info|ReleaseSearchService|Searching indexers for [The Dark Knight]. 0 active indexers
+2023-04-27 04:33:17.7|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:33:17.7|Info|MovieSearchService|Movie search completed. 0 reports downloaded.

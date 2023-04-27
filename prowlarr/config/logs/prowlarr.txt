@@ -833,3 +833,572 @@
 2023-04-27 03:19:06.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 03:19:06.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 03:19:07.2|Info|CommandExecutor|Starting 3 threads for tasks.
+2023-04-27 04:24:04.7|Info|Cardigann|Adding request: https://nyaa.si/?q=&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:24:06.5|Info|Cardigann|Adding request: https://nyaa.si/?q=&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:26:14.5|Error|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+
+[v1.3.2.3006] FluentValidation.ValidationException: Validation failed: 
+ -- ApiKey: 'Api Key' must not be empty.
+   at Prowlarr.Api.V1.ProviderControllerBase`3.VerifyValidationResult(ValidationResult validationResult, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 204
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Validate(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 188
+   at Prowlarr.Api.V1.ProviderControllerBase`3.GetDefinition(TProviderResource providerResource, Boolean validate, Boolean includeWarnings, Boolean forceValidate) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 101
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 142
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:14.6|Warn|ProwlarrErrorPipeline|FluentValidation.ValidationException: Validation failed: 
+ -- ApiKey: 'Api Key' must not be empty.
+
+[v1.3.2.3006] FluentValidation.ValidationException: Validation failed: 
+ -- ApiKey: 'Api Key' must not be empty.
+   at Prowlarr.Api.V1.ProviderControllerBase`3.VerifyValidationResult(ValidationResult validationResult, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 204
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Validate(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 188
+   at Prowlarr.Api.V1.ProviderControllerBase`3.GetDefinition(TProviderResource providerResource, Boolean validate, Boolean includeWarnings, Boolean forceValidate) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 101
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 142
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:14.7|Warn|ProwlarrErrorPipeline|Invalid request Validation failed: 
+ -- ApiKey: 'Api Key' must not be empty.
+2023-04-27 04:26:26.4|Error|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Name does not resolve (sonarr.localhost:80)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:26.6|Warn|ProwlarrErrorPipeline|System.Net.Http.HttpRequestException: Name does not resolve (sonarr.localhost:80)
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Name does not resolve (sonarr.localhost:80)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:26.7|Fatal|ProwlarrErrorPipeline|Request Failed. POST /api/v1/applications/test
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Name does not resolve (sonarr.localhost:80)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:36.0|Error|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Connection refused (sonarr:7878)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:36.1|Warn|ProwlarrErrorPipeline|System.Net.Http.HttpRequestException: Connection refused (sonarr:7878)
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Connection refused (sonarr:7878)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:36.2|Fatal|ProwlarrErrorPipeline|Request Failed. POST /api/v1/applications/test
+
+[v1.3.2.3006] System.Net.Http.HttpRequestException: Connection refused (sonarr:7878)
+ ---> System.Net.Sockets.SocketException (111): Connection refused
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.attemptConnection(AddressFamily addressFamily, SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 316
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.onConnect(SocketsHttpConnectionContext context, CancellationToken cancellationToken) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 302
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponseAsync(HttpRequest request, CookieContainer cookies) in D:\a\1\s\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:line 108
+   at NzbDrone.Common.Http.HttpClient.ExecuteRequestAsync(HttpRequest request, CookieContainer cookieContainer) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 170
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 70
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.GetIndexerSchema(SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 74
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.<>c__DisplayClass11_0.<BuildSonarrIndexer>b__0() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Common.Cache.Cached`1.Get(String key, Func`1 function, Nullable`1 lifeTime) in D:\a\1\s\src\NzbDrone.Common\Cache\Cached.cs:line 104
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.BuildSonarrIndexer(IndexerDefinition indexer, DownloadProtocol protocol, Int32 id) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 178
+   at NzbDrone.Core.Applications.Sonarr.Sonarr.Test() in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\Sonarr.cs:line 50
+   at NzbDrone.Core.ThingiProvider.ProviderFactory`2.Test(TProviderDefinition definition) in D:\a\1\s\src\NzbDrone.Core\ThingiProvider\ProviderFactory.cs:line 81
+   at NzbDrone.Core.Applications.ApplicationFactory.Test(ApplicationDefinition definition) in D:\a\1\s\src\NzbDrone.Core\Applications\ApplicationFactory.cs:line 64
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 193
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:42.3|Warn|HttpClient|HTTP Error - Res: [POST] http://sonarr:8989/api/v3/indexer/test: 400.BadRequest (167 bytes)
+[
+  {
+    "isWarning": false,
+    "propertyName": "",
+    "errorMessage": "Unable to connect to indexer, check the log for more details",
+    "severity": "error"
+  }
+]
+2023-04-27 04:26:42.3|Error|SonarrV3Proxy|Prowlarr URL is invalid
+
+[v1.3.2.3006] NzbDrone.Common.Http.HttpException: HTTP request failed: [400:BadRequest] [POST] at [http://sonarr:8989/api/v3/indexer/test]
+   at NzbDrone.Common.Http.HttpClient.ExecuteAsync(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 127
+   at NzbDrone.Common.Http.HttpClient.Execute(HttpRequest request) in D:\a\1\s\src\NzbDrone.Common\Http\HttpClient.cs:line 136
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.Execute[TResource](HttpRequest request) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 162
+   at NzbDrone.Core.Applications.Sonarr.SonarrV3Proxy.TestConnection(SonarrIndexer indexer, SonarrSettings settings) in D:\a\1\s\src\NzbDrone.Core\Applications\Sonarr\SonarrV3Proxy.cs:line 103
+[
+  {
+    "isWarning": false,
+    "propertyName": "",
+    "errorMessage": "Unable to connect to indexer, check the log for more details",
+    "severity": "error"
+  }
+]
+
+
+2023-04-27 04:26:42.3|Error|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request.
+
+[v1.3.2.3006] FluentValidation.ValidationException: Validation failed: 
+ -- ProwlarrUrl: Prowlarr url is invalid, Sonarr cannot connect to Prowlarr
+   at Prowlarr.Api.V1.ProviderControllerBase`3.VerifyValidationResult(ValidationResult validationResult, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 204
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 195
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:42.4|Warn|ProwlarrErrorPipeline|FluentValidation.ValidationException: Validation failed: 
+ -- ProwlarrUrl: Prowlarr url is invalid, Sonarr cannot connect to Prowlarr
+
+[v1.3.2.3006] FluentValidation.ValidationException: Validation failed: 
+ -- ProwlarrUrl: Prowlarr url is invalid, Sonarr cannot connect to Prowlarr
+   at Prowlarr.Api.V1.ProviderControllerBase`3.VerifyValidationResult(ValidationResult validationResult, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 204
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderDefinition definition, Boolean includeWarnings) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 195
+   at Prowlarr.Api.V1.ProviderControllerBase`3.Test(TProviderResource providerResource) in D:\a\1\s\src\Prowlarr.Api.V1\ProviderControllerBase.cs:line 144
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Prowlarr.Http.Middleware.BufferingMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\BufferingMiddleware.cs:line 28
+   at Prowlarr.Http.Middleware.IfModifiedMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\IfModifiedMiddleware.cs:line 41
+   at Prowlarr.Http.Middleware.CacheHeaderMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\CacheHeaderMiddleware.cs:line 33
+   at Prowlarr.Http.Middleware.StartingUpMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\StartingUpMiddleware.cs:line 38
+   at Prowlarr.Http.Middleware.UrlBaseMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\UrlBaseMiddleware.cs:line 27
+   at Prowlarr.Http.Middleware.VersionMiddleware.InvokeAsync(HttpContext context) in D:\a\1\s\src\Prowlarr.Http\Middleware\VersionMiddleware.cs:line 28
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+
+
+2023-04-27 04:26:42.4|Warn|ProwlarrErrorPipeline|Invalid request Validation failed: 
+ -- ProwlarrUrl: Prowlarr url is invalid, Sonarr cannot connect to Prowlarr
+2023-04-27 04:27:06.2|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [] for Season / Episode:[], Offset: 0, Limit: 100, Categories: [5000, 5070]
+2023-04-27 04:27:06.2|Info|Cardigann|Adding request: https://nyaa.si/?q=&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:27:06.4|Info|Cardigann|Adding request: https://nyaa.si/?q=&p=2&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:27:30.4|Info|Cardigann|Adding request: https://www.cpasbien.tw/home/
+2023-04-27 04:27:31.6|Info|Cardigann|Adding request: https://www.cpasbien.tw/home/
+2023-04-27 04:30:27.3|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Jigokuraku] for Season / Episode:[S01E01], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:27.3|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E01&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:27.6|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E01&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:29.3|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Jigokuraku] for Season / Episode:[S01E02], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:29.3|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E02&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:31.3|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Jigokuraku] for Season / Episode:[S01E03], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:31.3|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E03&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:31.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E02&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:33.3|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Hell's Paradise] for Season / Episode:[S01E01], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:33.3|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E01&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:33.4|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E03&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:35.4|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Hell's Paradise] for Season / Episode:[S01E02], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:35.4|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E02&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:37.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E01&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:39.6|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Hell's Paradise] for Season / Episode:[S01E03], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:39.6|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E03&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:41.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E02&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:43.8|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Jigokuraku] for Season / Episode:[S01E04], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:43.8|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E04&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:45.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E03&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:49.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Jigokuraku%20S01E04&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:53.5|Info|ReleaseSearchService|Searching indexer(s): [Nyaa.si] for Term: [Hell's Paradise] for Season / Episode:[S01E04], Offset: 0, Limit: 100, Categories: [5000]
+2023-04-27 04:30:53.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E04&f=0&c=0_0&s=id&o=desc
+2023-04-27 04:30:55.5|Info|Cardigann|Adding request: https://nyaa.si/?q=Hell%27s%20Paradise%20S01E04&f=0&c=0_0&s=id&o=desc

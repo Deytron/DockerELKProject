@@ -241,3 +241,205 @@
 [2023-04-27 07:19:11.212 +00:00] [INF] [13] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Update Plugins"
 [2023-04-27 07:19:12.142 +00:00] [INF] [8] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Update Plugins" Completed after 0 minute(s) and 0 seconds
 [2023-04-27 07:19:12.157 +00:00] [INF] [8] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 07:30:03.973 +00:00] [INF] [87] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Saving system configuration
+[2023-04-27 07:30:03.975 +00:00] [INF] [87] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: "/config/cache"
+[2023-04-27 07:30:03.977 +00:00] [INF] [99] Emby.Server.Implementations.EntryPoints.ExternalPortForwarding: Stopping NAT discovery
+[2023-04-27 07:30:04.103 +00:00] [WRN] [87] Jellyfin.Server.Implementations.Users.UserManager: No users, creating one with username "abc"
+[2023-04-27 07:30:55.028 +00:00] [WRN] [104] Jellyfin.Server.Middleware.ResponseTimeMiddleware: Slow HTTP Response from "http://stream.localhost/Library/VirtualFolders?collectionType=movies&refreshLibrary=false&name=Films" to "172.25.0.1" in 0:00:01.0990196 with Status Code 204
+[2023-04-27 07:31:06.977 +00:00] [WRN] [107] Jellyfin.Server.Middleware.ResponseTimeMiddleware: Slow HTTP Response from "http://stream.localhost/Library/VirtualFolders?collectionType=tvshows&refreshLibrary=false&name=Anime" to "172.25.0.1" in 0:00:01.0063958 with Status Code 204
+[2023-04-27 07:31:15.598 +00:00] [WRN] [113] Jellyfin.Server.Middleware.ResponseTimeMiddleware: Slow HTTP Response from "http://stream.localhost/Library/VirtualFolders?collectionType=tvshows&refreshLibrary=false&name=S%C3%A9ries" to "172.25.0.1" in 0:00:01.0036152 with Status Code 204
+[2023-04-27 07:31:23.766 +00:00] [INF] [114] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Saving system configuration
+[2023-04-27 07:31:23.767 +00:00] [INF] [114] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: "/config/cache"
+[2023-04-27 07:31:27.828 +00:00] [INF] [104] Jellyfin.Networking.Manager.NetworkManager: Defined LAN addresses : "[10.0.0.0/8,172.16.0.0/12,192.168.0.0/16]"
+[2023-04-27 07:31:27.828 +00:00] [INF] [104] Jellyfin.Networking.Manager.NetworkManager: Defined LAN exclusions : "[]"
+[2023-04-27 07:31:27.828 +00:00] [INF] [104] Jellyfin.Networking.Manager.NetworkManager: Using LAN addresses: "[10.0.0.0/8,172.16.0.0/12,192.168.0.0/16]"
+[2023-04-27 07:31:27.828 +00:00] [INF] [104] Jellyfin.Networking.Manager.NetworkManager: Using bind addresses: "[]"
+[2023-04-27 07:31:27.829 +00:00] [INF] [104] Jellyfin.Networking.Manager.NetworkManager: Using bind exclusions: "[]"
+[2023-04-27 07:31:28.742 +00:00] [INF] [100] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Saving system configuration
+[2023-04-27 07:31:28.743 +00:00] [INF] [100] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: "/config/cache"
+[2023-04-27 07:31:28.745 +00:00] [INF] [113] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshMediaLibraryTask"
+[2023-04-27 07:31:28.746 +00:00] [INF] [104] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 07:31:28.752 +00:00] [INF] [104] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 07:31:29.341 +00:00] [ERR] [116] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 07:31:29.375 +00:00] [INF] [116] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 07:31:29.377 +00:00] [INF] [116] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 07:31:29.492 +00:00] [INF] [100] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 07:31:29.492 +00:00] [INF] [105] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 07:31:29.492 +00:00] [INF] [115] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 07:31:37.667 +00:00] [INF] [105] Jellyfin.Server.Implementations.Users.UserManager: Authentication request for "root" has succeeded.
+[2023-04-27 07:31:37.668 +00:00] [INF] [105] Emby.Server.Implementations.Session.SessionManager: Current/Max sessions for user "root": 0/0
+[2023-04-27 07:31:37.711 +00:00] [INF] [105] Emby.Server.Implementations.Session.SessionManager: Creating new access token for user 728f15ca-c025-4e48-9a66-dc3c81c4737b
+[2023-04-27 07:31:37.840 +00:00] [INF] [108] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" request
+[2023-04-27 07:31:37.904 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"AccessSchedule"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.904 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"ActivityLog"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.904 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"CustomItemDisplayPreferences"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.904 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"DisplayPreferences"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"HomeSection"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"ImageInfo"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"ItemDisplayPreferences"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"Permission"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"Preference"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"ApiKey"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"Device"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"DeviceOptions"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 07:31:37.905 +00:00] [WRN] [115] Microsoft.EntityFrameworkCore.Model.Validation: The entity type '"User"' is configured to use schema '"jellyfin"', but SQLite does not support schemas. This configuration will be ignored by the SQLite provider.
+[2023-04-27 08:19:08.176 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Télécharger les sous-titres manquants"
+[2023-04-27 08:19:08.177 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "SubtitleScheduledTask"
+[2023-04-27 08:19:08.177 +00:00] [INF] [182] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Télécharger les sous-titres manquants"
+[2023-04-27 08:19:08.178 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Vider le répertoire cache"
+[2023-04-27 08:19:08.178 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Nettoyer le répertoire des journaux"
+[2023-04-27 08:19:08.178 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteCacheFileTask"
+[2023-04-27 08:19:08.178 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteLogFileTask"
+[2023-04-27 08:19:08.178 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Vider le répertoire cache"
+[2023-04-27 08:19:08.178 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Nettoyer le répertoire des journaux"
+[2023-04-27 08:19:08.179 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Rafraîchir les acteurs"
+[2023-04-27 08:19:08.179 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "PeopleValidationTask"
+[2023-04-27 08:19:08.179 +00:00] [INF] [173] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Optimiser la base de données"
+[2023-04-27 08:19:08.179 +00:00] [INF] [173] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "OptimizeDatabaseTask"
+[2023-04-27 08:19:08.179 +00:00] [INF] [174] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Nettoyer les dossier des transcodages"
+[2023-04-27 08:19:08.179 +00:00] [INF] [174] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "DeleteTranscodeFileTask"
+[2023-04-27 08:19:08.179 +00:00] [INF] [177] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Optimiser la base de données"
+[2023-04-27 08:19:08.179 +00:00] [INF] [174] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Nettoyer les dossier des transcodages"
+[2023-04-27 08:19:08.179 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Rafraîchir les acteurs"
+[2023-04-27 08:19:08.189 +00:00] [INF] [177] Emby.Server.Implementations.ScheduledTasks.Tasks.OptimizeDatabaseTask: Optimizing and vacuuming jellyfin.db...
+[2023-04-27 08:19:08.190 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Nettoyer le répertoire des journaux" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.191 +00:00] [INF] [174] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Nettoyer les dossier des transcodages" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.191 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.232 +00:00] [INF] [174] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.232 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "TasksRefreshChannels"
+[2023-04-27 08:19:08.251 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshChannelsScheduledTask"
+[2023-04-27 08:19:08.252 +00:00] [INF] [171] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Scanner la médiathèque"
+[2023-04-27 08:19:08.252 +00:00] [INF] [171] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshMediaLibraryTask"
+[2023-04-27 08:19:08.252 +00:00] [INF] [169] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "TasksRefreshChannels"
+[2023-04-27 08:19:08.252 +00:00] [INF] [182] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Télécharger les sous-titres manquants" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.252 +00:00] [INF] [173] Emby.Server.Implementations.ScheduledTasks.TaskManager: "IntervalTrigger" fired for task: "Refresh Guide"
+[2023-04-27 08:19:08.252 +00:00] [INF] [173] Emby.Server.Implementations.ScheduledTasks.TaskManager: Queuing task "RefreshGuideScheduledTask"
+[2023-04-27 08:19:08.252 +00:00] [INF] [171] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Refresh Guide"
+[2023-04-27 08:19:08.253 +00:00] [INF] [182] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.272 +00:00] [INF] [176] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:19:08.272 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Vider le répertoire cache" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.273 +00:00] [INF] [176] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:19:08.273 +00:00] [INF] [179] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.292 +00:00] [INF] [176] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:19:08.292 +00:00] [INF] [176] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:19:08.292 +00:00] [INF] [176] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:19:08.298 +00:00] [INF] [169] Emby.Server.Implementations.ScheduledTasks.TaskManager: "TasksRefreshChannels" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.298 +00:00] [INF] [175] Emby.Server.Implementations.Library.LibraryManager: People validation complete
+[2023-04-27 08:19:08.298 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Rafraîchir les acteurs" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.298 +00:00] [INF] [169] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.316 +00:00] [INF] [177] Emby.Server.Implementations.ScheduledTasks.Tasks.OptimizeDatabaseTask: jellyfin.db optimized successfully!
+[2023-04-27 08:19:08.316 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.334 +00:00] [INF] [177] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Optimiser la base de données" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.335 +00:00] [INF] [177] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.392 +00:00] [ERR] [168] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:19:08.394 +00:00] [INF] [168] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:19:08.394 +00:00] [INF] [171] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:19:08.394 +00:00] [INF] [168] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:19:08.394 +00:00] [INF] [119] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:19:08.423 +00:00] [INF] [175] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:19:11.402 +00:00] [INF] [175] Emby.Server.Implementations.LiveTv.LiveTvManager: Refreshing guide with 7 days of guide data
+[2023-04-27 08:19:11.407 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Refresh Guide" Completed after 0 minute(s) and 3 seconds
+[2023-04-27 08:19:11.407 +00:00] [INF] [175] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:28:35.963 +00:00] [INF] [275] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" closed
+[2023-04-27 08:28:36.026 +00:00] [INF] [276] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" request
+[2023-04-27 08:28:37.959 +00:00] [INF] [281] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" closed
+[2023-04-27 08:31:28.628 +00:00] [INF] [308] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" request
+[2023-04-27 08:32:22.129 +00:00] [INF] [313] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" closed
+[2023-04-27 08:34:58.290 +00:00] [INF] [342] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.25.0.1" request
+[2023-04-27 08:35:23.039 +00:00] [INF] [347] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:35:23.052 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:35:23.052 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:35:23.052 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:35:23.052 +00:00] [INF] [347] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:35:23.081 +00:00] [ERR] [356] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:35:23.084 +00:00] [INF] [356] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:35:23.085 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:35:23.085 +00:00] [INF] [344] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:35:23.085 +00:00] [INF] [115] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:35:23.085 +00:00] [INF] [356] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:35:23.838 +00:00] [INF] [356] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:35:23.840 +00:00] [INF] [356] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:35:23.840 +00:00] [INF] [356] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:35:23.840 +00:00] [INF] [356] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:35:23.840 +00:00] [INF] [356] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:35:23.865 +00:00] [ERR] [357] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:35:23.866 +00:00] [INF] [357] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:35:23.867 +00:00] [INF] [114] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:35:23.867 +00:00] [INF] [353] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:35:23.867 +00:00] [INF] [342] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:35:23.867 +00:00] [INF] [357] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:35:23.956 +00:00] [INF] [357] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:35:23.957 +00:00] [INF] [357] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:35:23.957 +00:00] [INF] [357] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:35:23.957 +00:00] [INF] [357] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:35:23.957 +00:00] [INF] [357] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:35:23.988 +00:00] [ERR] [356] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:35:23.989 +00:00] [INF] [356] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:35:23.989 +00:00] [INF] [343] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:35:23.989 +00:00] [INF] [114] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:35:23.989 +00:00] [INF] [351] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:35:23.989 +00:00] [INF] [356] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:35:24.088 +00:00] [INF] [343] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:35:24.089 +00:00] [INF] [343] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:35:24.089 +00:00] [INF] [343] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:35:24.089 +00:00] [INF] [343] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:35:24.089 +00:00] [INF] [343] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:35:24.111 +00:00] [ERR] [343] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:35:24.113 +00:00] [INF] [343] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:35:24.113 +00:00] [INF] [114] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:35:24.113 +00:00] [INF] [351] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:35:24.113 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:35:24.113 +00:00] [INF] [343] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks
+[2023-04-27 08:35:24.213 +00:00] [INF] [351] Emby.Server.Implementations.ScheduledTasks.TaskManager: Executing "Scanner la médiathèque"
+[2023-04-27 08:35:24.213 +00:00] [INF] [351] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/anime"
+[2023-04-27 08:35:24.213 +00:00] [INF] [351] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/series"
+[2023-04-27 08:35:24.214 +00:00] [INF] [351] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/movies"
+[2023-04-27 08:35:24.214 +00:00] [INF] [351] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2023-04-27 08:35:24.239 +00:00] [ERR] [114] Emby.Server.Implementations.Library.LibraryManager: Error running post-scan task
+System.ArgumentException: Not enough valid pictures provided to create a splashscreen!
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateCollage(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Jellyfin.Drawing.Skia.SplashscreenBuilder.GenerateSplash(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops, String outputPath)
+   at Jellyfin.Drawing.Skia.SkiaEncoder.CreateSplashscreen(IReadOnlyList`1 posters, IReadOnlyList`1 backdrops)
+   at Emby.Server.Implementations.Library.SplashscreenPostScanTask.Run(IProgress`1 progress, CancellationToken cancellationToken)
+   at Emby.Server.Implementations.Library.LibraryManager.RunPostScanTasks(IProgress`1 progress, CancellationToken cancellationToken)
+[2023-04-27 08:35:24.241 +00:00] [INF] [114] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scanner la médiathèque" Completed after 0 minute(s) and 0 seconds
+[2023-04-27 08:35:24.242 +00:00] [INF] [343] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/series"
+[2023-04-27 08:35:24.242 +00:00] [INF] [347] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/movies"
+[2023-04-27 08:35:24.242 +00:00] [INF] [356] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/anime"
+[2023-04-27 08:35:24.242 +00:00] [INF] [114] Emby.Server.Implementations.ScheduledTasks.TaskManager: ExecuteQueuedTasks

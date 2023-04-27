@@ -2489,3 +2489,23 @@
 2023-04-27 03:19:06.8|Info|AppFolderInfo|Data directory is being overridden to [/config]
 2023-04-27 03:19:07.1|Info|MigrationController|*** Migrating data source=/config/lidarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 03:19:07.3|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 03:26:08.4|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:26:08.4|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:26:08.4|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:26:08.4|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 03:41:08.6|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:41:08.6|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:41:08.6|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:41:08.6|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 03:56:08.9|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:56:08.9|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:56:08.9|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:56:08.9|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:11:09.1|Info|RssSyncService|Starting RSS Sync
+2023-04-27 04:11:09.1|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 04:11:09.1|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:11:09.1|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:26:09.3|Info|RssSyncService|Starting RSS Sync
+2023-04-27 04:26:09.3|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 04:26:09.3|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:26:09.3|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0

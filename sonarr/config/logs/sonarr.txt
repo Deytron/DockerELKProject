@@ -707,3 +707,78 @@
 2023-04-27 03:19:07.4|Info|OwinHostController|Listening on the following URLs:
 2023-04-27 03:19:07.4|Info|OwinHostController|  http://*:8989/
 2023-04-27 03:19:07.9|Info|SonarrBootstrapper|Starting Web Server
+2023-04-27 03:26:08.9|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:26:09.0|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:26:09.0|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:26:09.0|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 03:41:09.2|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:41:09.2|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:41:09.2|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:41:09.2|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 03:56:09.4|Info|RssSyncService|Starting RSS Sync
+2023-04-27 03:56:09.4|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 03:56:09.4|Info|DownloadDecisionMaker|No results found
+2023-04-27 03:56:09.4|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:11:09.7|Info|RssSyncService|Starting RSS Sync
+2023-04-27 04:11:09.7|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 04:11:09.7|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:11:09.7|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:23:12.9|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Invalid Path
+ -- RootFolderPath: Invalid Path
+2023-04-27 04:26:09.9|Info|RssSyncService|Starting RSS Sync
+2023-04-27 04:26:09.9|Warn|FetchAndParseRssService|No available indexers. check your configuration.
+2023-04-27 04:26:09.9|Info|DownloadDecisionMaker|No results found
+2023-04-27 04:26:09.9|Info|RssSyncService|RSS Sync Completed. Reports found: 0, Reports grabbed: 0
+2023-04-27 04:26:42.3|Warn|Newznab|Unable to connect to indexer
+
+[v3.0.10.1567] System.Net.WebException: DNS Name Resolution Failure: 'prowlarr.localhost'
+  at NzbDrone.Common.Http.Dispatchers.ManagedHttpDispatcher.GetResponse (NzbDrone.Common.Http.HttpRequest request, System.Net.CookieContainer cookies) [0x0015a] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Common\Http\Dispatchers\ManagedHttpDispatcher.cs:95 
+  at NzbDrone.Common.Http.HttpClient.ExecuteRequest (NzbDrone.Common.Http.HttpRequest request, System.Net.CookieContainer cookieContainer) [0x00086] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Common\Http\HttpClient.cs:126 
+  at NzbDrone.Common.Http.HttpClient.Execute (NzbDrone.Common.Http.HttpRequest request) [0x00008] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Common\Http\HttpClient.cs:59 
+  at NzbDrone.Common.Http.HttpClient.Get (NzbDrone.Common.Http.HttpRequest request) [0x00007] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Common\Http\HttpClient.cs:281 
+  at NzbDrone.Core.Indexers.Newznab.NewznabCapabilitiesProvider.FetchCapabilities (NzbDrone.Core.Indexers.Newznab.NewznabSettings indexerSettings) [0x000a1] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\Newznab\NewznabCapabilitiesProvider.cs:64 
+  at NzbDrone.Core.Indexers.Newznab.NewznabCapabilitiesProvider+<>c__DisplayClass4_0.<GetCapabilities>b__0 () [0x00000] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\Newznab\NewznabCapabilitiesProvider.cs:36 
+  at NzbDrone.Common.Cache.Cached`1[T].Get (System.String key, System.Func`1[TResult] function, System.Nullable`1[T] lifeTime) [0x000b1] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Common\Cache\Cached.cs:104 
+  at NzbDrone.Core.Indexers.Newznab.NewznabCapabilitiesProvider.GetCapabilities (NzbDrone.Core.Indexers.Newznab.NewznabSettings indexerSettings) [0x00020] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\Newznab\NewznabCapabilitiesProvider.cs:36 
+  at NzbDrone.Core.Indexers.Newznab.Newznab.get_PageSize () [0x00000] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\Newznab\Newznab.cs:24 
+  at NzbDrone.Core.Indexers.Newznab.Newznab.GetRequestGenerator () [0x00000] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\Newznab\Newznab.cs:28 
+  at NzbDrone.Core.Indexers.HttpIndexerBase`1[TSettings].TestConnection () [0x00007] in C:\BuildAgent\work\63739567f01dbcc2\src\NzbDrone.Core\Indexers\HttpIndexerBase.cs:336 
+
+2023-04-27 04:26:42.3|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- : Unable to connect to indexer, check the log for more details
+2023-04-27 04:30:07.2|Info|AddSeriesService|Adding Series [402474][Hell's Paradise] Path: [/downloads/Hell's Paradise]
+2023-04-27 04:30:07.2|Info|SceneMappingService|Updating Scene mappings
+2023-04-27 04:30:07.2|Info|RefreshSeriesService|Updating Hell's Paradise
+2023-04-27 04:30:07.3|Info|RefreshEpisodeService|Starting episode info refresh for: [402474][Hell's Paradise]
+2023-04-27 04:30:07.4|Info|RefreshEpisodeService|Finished episode refresh for series: [402474][Hell's Paradise].
+2023-04-27 04:30:07.9|Info|MediaCoverService|Downloading Poster for [402474][Hell's Paradise] https://artworks.thetvdb.com/banners/v4/series/402474/posters/64296abe80271.jpg
+2023-04-27 04:30:07.9|Info|DiskScanService|Scanning Hell's Paradise
+2023-04-27 04:30:07.9|Info|DiskScanService|Completed scanning disk for Hell's Paradise
+2023-04-27 04:30:07.9|Info|SeriesScannedHandler|[Hell's Paradise] was recently added, performing post-add actions
+2023-04-27 04:30:07.9|Info|MetadataService|Series folder does not exist, skipping metadata creation
+2023-04-27 04:30:08.0|Info|MediaCoverService|Downloading Fanart for [402474][Hell's Paradise] https://artworks.thetvdb.com/banners/v4/series/402474/backgrounds/641bce4a2ac99.jpg
+2023-04-27 04:30:11.8|Info|MetadataService|Series folder does not exist, skipping metadata image creation
+2023-04-27 04:30:27.3|Info|ReleaseSearchService|Searching indexers for [Hell's Paradise : S01E01]. 1 active indexers
+2023-04-27 04:30:27.8|Info|ReleaseSearchService|Searching indexers for [Hell's Paradise : S01E02]. 1 active indexers
+2023-04-27 04:30:28.4|Info|ReleaseSearchService|Searching indexers for [Hell's Paradise : S01E03]. 1 active indexers
+2023-04-27 04:30:43.5|Info|DownloadDecisionMaker|Processing 11 releases
+2023-04-27 04:30:43.7|Info|DownloadService|Report sent to Transmission. [LostYears] Hell's Paradise - S01E01 (WEB 1080p HEVC AAC E-AC-3) [Dual-Audio] | Jigokuraku
+2023-04-27 04:30:43.7|Info|EpisodeSearchService|Episode search completed. 1 reports downloaded.
+2023-04-27 04:30:43.7|Info|ReleaseSearchService|Searching indexers for [Hell's Paradise : S01E04]. 1 active indexers
+2023-04-27 04:30:47.5|Info|DownloadDecisionMaker|Processing 11 releases
+2023-04-27 04:30:47.6|Info|DownloadService|Report sent to Transmission. [LostYears] Hell's Paradise - S01E02 (WEB 1080p HEVC AAC E-AC-3) [Dual-Audio] | Jigokuraku
+2023-04-27 04:30:47.6|Info|EpisodeSearchService|Episode search completed. 1 reports downloaded.
+2023-04-27 04:30:51.4|Info|DownloadDecisionMaker|Processing 7 releases
+2023-04-27 04:30:51.5|Info|DownloadService|Report sent to Transmission. Hell's Paradise S01E03 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR) (Jigokuraku)
+2023-04-27 04:30:51.5|Info|EpisodeSearchService|Episode search completed. 1 reports downloaded.
+2023-04-27 04:30:57.4|Info|DownloadDecisionMaker|Processing 7 releases
+2023-04-27 04:30:57.5|Info|DownloadService|Report sent to Transmission. Hell's Paradise S01E04 VOSTFR 1080p WEB x264 AAC -Tsundere-Raws (CR) (Jigokuraku)
+2023-04-27 04:30:57.5|Info|EpisodeSearchService|Episode search completed. 1 reports downloaded.
+2023-04-27 04:31:19.2|Warn|StaticResourceModule|Couldn't find handler for /activity/hisstream.localhostory
+2023-04-27 04:36:33.1|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Folder is not writable by user abc
+2023-04-27 04:36:44.4|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Folder is not writable by user abc
+2023-04-27 04:36:57.1|Warn|SonarrErrorPipeline|Invalid request Validation failed: 
+ -- Path: Folder is not writable by user abc

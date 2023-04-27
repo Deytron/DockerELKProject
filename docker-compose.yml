@@ -134,6 +134,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
+      - USER=user
+      - PASSWORD=password
     volumes:
       - ./transmission/config:/config
       - ./transmission/torrents:/torrents
@@ -148,6 +150,28 @@ services:
       - "traefik.http.routers.transmission.rule=Host(`transmission.localhost`)"
       - "traefik.http.routers.transmission.entrypoints=web"
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
+
+  ############################
+  showdown:
+    image: linuxserver/lidarr
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./lidarr/config:/config
+      - ./lidarr/downloads:/downloads
+      - ./lidarr/music:/music
+      - all-downloads:/downloads
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.lidarr.rule=Host(`lidarr.localhost`)"
+      - "traefik.http.routers.lidarr.entrypoints=web"
+      - "traefik.http.services.lidarr.loadbalancer.server.port=8686"
+    depends_on:
+      - prowlarr
+    restart: unless-stopped
 
 volumes:
   all-downloads:
