@@ -3476,3 +3476,10 @@
 2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/radarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 04:38:55.3|Info|CommandExecutor|Starting 2 threads for tasks.
+2023-04-27 04:45:31.9|Info|Bootstrap|Starting Radarr - /app/radarr/bin/Radarr - Version 4.4.4.7068
+2023-04-27 04:45:31.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.0|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.2|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.4|Info|MigrationController|*** Migrating data source=/config/radarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:32.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:33.1|Info|CommandExecutor|Starting 2 threads for tasks.

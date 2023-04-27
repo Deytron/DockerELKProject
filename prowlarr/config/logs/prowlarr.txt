@@ -1410,3 +1410,10 @@
 2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 04:38:55.1|Info|CommandExecutor|Starting 3 threads for tasks.
+2023-04-27 04:45:31.5|Info|Bootstrap|Starting Prowlarr - /app/prowlarr/bin/Prowlarr - Version 1.3.2.3006
+2023-04-27 04:45:31.7|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:31.7|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:31.9|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.1|Info|MigrationController|*** Migrating data source=/config/prowlarr.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:32.2|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-20000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:32.6|Info|CommandExecutor|Starting 3 threads for tasks.

@@ -152,21 +152,21 @@ services:
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
 
   ############################
-  showdown:
-    image: linuxserver/lidarr
-    container_name: lidarr
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/New_York
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.showdown.rule=Host(`showdown.localhost`)"
-      - "traefik.http.routers.showdown.entrypoints=web"
-      - "traefik.http.services.showdown.loadbalancer.server.port=8000"
-    depends_on:
-      - prowlarr
-    restart: unless-stopped
+  # showdown:
+  #   image: voidmonkey/pokemon-showdown
+  #   container_name: showdown
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=America/New_York
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.showdown.rule=Host(`showdown.localhost`)"
+  #     - "traefik.http.routers.showdown.entrypoints=web"
+  #     - "traefik.http.services.showdown.loadbalancer.server.port=8000"
+  #   depends_on:
+  #     - prowlarr
+  #   restart: unless-stopped
 
 volumes:
   all-downloads:

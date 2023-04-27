@@ -2515,3 +2515,8 @@
 2023-04-27 04:38:54.3|Info|AppFolderInfo|Data directory is being overridden to [/config]
 2023-04-27 04:38:54.5|Info|MigrationController|*** Migrating data source=/config/lidarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
 2023-04-27 04:38:54.7|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:31.9|Info|Bootstrap|Starting Lidarr - /app/lidarr/bin/Lidarr.dll - Version 1.1.4.3027
+2023-04-27 04:45:32.0|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.2|Info|AppFolderInfo|Data directory is being overridden to [/config]
+2023-04-27 04:45:32.4|Info|MigrationController|*** Migrating data source=/config/lidarr.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
+2023-04-27 04:45:32.5|Info|MigrationController|*** Migrating data source=/config/logs.db;cache size=-10000;datetimekind=Utc;journal mode=Wal;pooling=True;version=3 ***
