@@ -1,0 +1,160 @@
+---
+id: tornado
+name: Tornado
+description: "Tornado is a SLOVENIAN Private Torrent Tracker for MOVIES / TV / GENERAL"
+language: sl-SI
+type: private
+encoding: UTF-8
+links:
+  - https://www.tornado.si/
+
+caps:
+  categorymappings:
+    - {id: 33, cat: Movies/SD, desc: "Filmi XviD"}
+    - {id: 34, cat: Movies/DVD, desc: "Filmi DVD"}
+    - {id: 35, cat: Movies/BluRay, desc: "Filmi Bluray"}
+    - {id: 36, cat: Movies/HD, desc: "Filmi HD"}
+    - {id: 37, cat: Audio/MP3, desc: "Glasba MP3"}
+    - {id: 38, cat: Audio/Lossless, desc: "Glasba FLAC"}
+    - {id: 39, cat: Audio/Video, desc: "Glasba Koncerti"}
+    - {id: 40, cat: PC/Games, desc: "Igre PC"}
+    - {id: 41, cat: Console/PS3, desc: "Igre Playstation"}
+    - {id: 42, cat: Console/XBox, desc: "Igre Xbox"}
+    - {id: 43, cat: Console/NDS, desc: "Igre Nintendo"}
+    - {id: 44, cat: TV, desc: "TV Serije"}
+    - {id: 45, cat: TV/Other, desc: "TV Ostalo"}
+    - {id: 46, cat: Books/EBook, desc: "PDF E-Knjige"}
+    - {id: 47, cat: Books/Mags, desc: "PDF E-Revije"}
+    - {id: 48, cat: TV/Anime, desc: "Risanke Risanke"}
+    - {id: 49, cat: TV/Sport, desc: "Šport Šport"}
+    - {id: 50, cat: PC, desc: "Programi Programi"}
+    - {id: 51, cat: XXX/DVD, desc: "Erotika Video"}
+    - {id: 52, cat: XXX/Other, desc: "Erotika Ostalo"}
+    - {id: 53, cat: Other/Misc, desc: "Ostalo Ostalo"}
+
+  modes:
+    search: [q]
+    tv-search: [q, season, ep]
+    movie-search: [q]
+    music-search: [q]
+    book-search: [q]
+
+settings:
+  - name: username
+    type: text
+    label: Username
+  - name: password
+    type: password
+    label: Password
+  - name: freeleech
+    type: checkbox
+    label: Search freeleech only
+    default: false
+  - name: sort
+    type: select
+    label: Sort requested from site
+    default: id
+    options:
+      id: created
+      seeders: seeders
+      size: size
+      name: title
+  - name: type
+    type: select
+    label: Order requested from site
+    default: desc
+    options:
+      desc: desc
+      asc: asc
+
+login:
+  path: account-login.php
+  method: post
+  inputs:
+    username: "{{ .Config.username }}"
+    password: "{{ .Config.password }}"
+    remember: yes
+  error:
+    - selector: div.myFrame:contains("Access Denied")
+  test:
+    path: index.php
+    selector: a[href="account-logout.php"]
+
+search:
+  paths:
+    # https://www.tornado.si/torrents-search.php?search=&incldesc=1&inclexternal=0&incldead=1&freeleech=2&inclrosub=0
+    - path: torrents-search.php
+  inputs:
+    $raw: "{{ range .Categories }}c{{.}}=1&{{end}}"
+    search: "{{ .Keywords }}"
+    # 0 name&descr, 1 name, 2 description, 3 genre
+    incldesc: 1
+    # 0 both, 1 local, 2 external
+    inclexternal: 0
+    # 0 active, 1 incldead, 2 onlydead
+    incldead: 1
+    # 0 all 1 notfree 2 onlyfree
+    freeleech: "{{ if .Config.freeleech }}2{{ else }}0{{ end }}"
+    # 0 all subs, 1 only Romanian subs
+    inclrosub: 0
+    sort: "{{ .Config.sort }}"
+    order: "{{ .Config.type }}"
+    # does not support imdbid search or return imdb link
+
+  keywordsfilters:
+    - name: re_replace
+      args: ["(\\w+)", " +$1"] # prepend + to each word
+
+  rows:
+    selector: table.ttable_headinner > tbody > tr
+
+  fields:
+    category:
+      selector: a[href^="torrents.php?cat="]
+      attribute: href
+      filters:
+        - name: querystring
+          args: cat
+    title:
+      selector: a[href^="torrents-details.php?id="]
+    details:
+      selector: a[href^="torrents-details.php?id="]
+      attribute: href
+    download:
+      selector: a[href^="download.php?id="]
+      attribute: href
+    poster:
+      selector: a[href^="torrents-details.php?id="]
+      attribute: onmouseover
+      filters:
+        - name: regexp
+          args: src=(.+?) width
+    size:
+      selector: td:nth-last-child(9)
+    date:
+      selector: td:nth-last-child(8)
+      # auto adjusted by site account profile
+      filters:
+        - name: dateparse
+          args: "dd.MMMyyyyHH:mm"
+    seeders:
+      selector: td:nth-last-child(6)
+    leechers:
+      selector: td:nth-last-child(5)
+    grabs:
+      selector: td:nth-last-child(4)
+    downloadvolumefactor:
+      case:
+        img[src$="/free.gif"]: 0
+        img[src$="/t_extern.png"]: 0
+        "*": 1
+    uploadvolumefactor:
+      case:
+        img[src$="/t_extern.png"]: 0
+        "*": 1
+    minimumratio:
+      text: 1.0
+    minimumseedtime:
+      # 2 day (as seconds = 2 x 24 x 60 x 60)
+      text: 172800
+# TorrentTrader 2.08
