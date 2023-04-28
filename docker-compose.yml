@@ -37,7 +37,7 @@ services:
       - ./downloads:/downloads
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.jellyfin.rule=Host(`stream.localhost`)"
+      - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.localhost`)"
       - "traefik.http.routers.jellyfin.entrypoints=web"
       - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
     devices:
