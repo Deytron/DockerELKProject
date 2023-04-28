@@ -10,7 +10,8 @@ services:
       - "--providers.docker.watch"
       - --entrypoints.web.address=:80
       - "--metrics.prometheus=true"
-      - "--metrics.prometheus.buckets=0.1,0.3,1.2,5.0"
+      - --ping
+      # - "--metrics.prometheus.buckets=0.1,0.3,1.2,5.0"
     ports:
       - 80:80
       - 443:443
@@ -20,8 +21,6 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.myrouter.entrypoints=web"
       - "traefik.http.services.myservice.loadbalancer.server.port=80"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.localhost`)"
-      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
     restart: unless-stopped
     healthcheck:
       test: traefik healthcheck --ping
@@ -51,7 +50,6 @@ services:
       interval: 1m
       timeout: 10s
       retries: 3
-    command: ["/bin/bash", "-c", "sed -i 's|<EnableMetrics>false</EnableMetrics>|<EnableMetrics>true</EnableMetrics>|g' /config/system.xml && /init"]
 
   ############################
   # Download stack
@@ -211,9 +209,9 @@ services:
       - ./grafana/config:/etc/grafana
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.prometheus.rule=Host(`grafana.localhost`)"
-      - "traefik.http.routers.prometheus.entrypoints=web"
-      - "traefik.http.services.prometheus.loadbalancer.server.port=3000"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
+      - "traefik.http.routers.grafana.entrypoints=web"
+      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
   #################
   # ARR AND OTHER EXPORTERS
   ###############

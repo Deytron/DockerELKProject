@@ -79,3 +79,7 @@ Un fichier `docker-compose-bonus.yml` est présent, il ouvre un serveur Pokemon 
 Une stack de monitoring via Prometheus et Grafana vient d'être ajoutée, elle permet via les différents exporters présents dans le compose file, de pouvoir voir l'état de tous les services.
 
 Pour voir le dashboard de surveillance, rendez-vous sur `grafana.localhost`
+
+## Jellyfin
+
+Pour activer le monitoring Prometheus et Jellyfin, ouvrez le fichier `jellyfin/config/system.xml`, et éditez la ligne `<EnableMetrics>false</EnableMetrics>`, remplacez false par true.
