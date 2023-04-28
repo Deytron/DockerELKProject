@@ -5,4 +5,4 @@ scrape_configs:
   - job_name: "node"
     scrape_interval: 1m
     static_configs:
-      - targets: ["traefik:80", "sonarre:9707", "radarre:9708", "lidarre:9709", "jellyfin:8096", "transmissione:19091"]
+      - targets: ["traefik:8080", "sonarre:9707", "radarre:9708", "lidarre:9709", "jellyfin:8096", "transmissione:19091"]
