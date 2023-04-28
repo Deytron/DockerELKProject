@@ -207,6 +207,7 @@ services:
       - prometheus
     volumes:
       - ./grafana/config:/etc/grafana
+      - ./grafana:/var/lib/grafana/
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
