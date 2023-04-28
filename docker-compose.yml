@@ -19,6 +19,13 @@ services:
       - "traefik.http.routers.myrouter.entrypoints=web"
       - "traefik.http.services.myservice.loadbalancer.server.port=80"
     restart: unless-stopped
+    healthcheck:
+      test: traefik healthcheck --ping
+      interval: 5s
+      timeout: 1s
+      retries: 3
+      start_period: 10s
+
   ##########################
   jellyfin:
     image: linuxserver/jellyfin:latest
@@ -36,6 +43,12 @@ services:
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
       - /dev/dri/card0:/dev/dri/card0
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8096/web/index.html"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+
   ############################
   # Download stack
   ############################
@@ -55,6 +68,11 @@ services:
       - "traefik.http.routers.prowlarr.rule=Host(`prowlarr.localhost`)"
       - "traefik.http.routers.prowlarr.entrypoints=web"
       - "traefik.http.services.prowlarr.loadbalancer.server.port=9696"
+    healthcheck:
+      test: curl www.google.com || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
 
   ############################
   sonarr:
@@ -77,6 +95,11 @@ services:
       - "traefik.http.routers.sonarr.rule=Host(`sonarr.localhost`)"
       - "traefik.http.routers.sonarr.entrypoints=web"
       - "traefik.http.services.sonarr.loadbalancer.server.port=8989"
+    healthcheck:
+      test: curl www.google.com || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
 
   ############################
   radarr:
@@ -97,6 +120,11 @@ services:
     depends_on:
       - prowlarr
     restart: unless-stopped
+    healthcheck:
+      test: curl www.google.com || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
 
   ############################
   lidarr:
@@ -119,6 +147,11 @@ services:
     depends_on:
       - prowlarr
     restart: unless-stopped
+    healthcheck:
+      test: curl www.google.com || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
 
   #############################
   transmission:
@@ -144,3 +177,8 @@ services:
       - "traefik.http.routers.transmission.rule=Host(`transmission.localhost`)"
       - "traefik.http.routers.transmission.entrypoints=web"
       - "traefik.http.services.transmission.loadbalancer.server.port=9091"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://transmission:9091"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
