@@ -7,7 +7,10 @@ services:
     command:
       - --api.insecure=true
       - --providers.docker=true
+      - "--providers.docker.watch"
       - --entrypoints.web.address=:80
+      - "--metrics.prometheus=true"
+      - "--metrics.prometheus.buckets=0.1,0.3,1.2,5.0"
     ports:
       - 80:80
       - 443:443
@@ -31,7 +34,6 @@ services:
   jellyfin:
     image: linuxserver/jellyfin:latest
     container_name: jellyfin
-    # user: 968:968
     restart: unless-stopped
     volumes:
       - ./jellyfin/config:/config
@@ -49,6 +51,7 @@ services:
       interval: 1m
       timeout: 10s
       retries: 3
+    command: ["/bin/bash", "-c", "sed -i 's|<EnableMetrics>false</EnableMetrics>|<EnableMetrics>true</EnableMetrics>|g' /config/system.xml && /init"]
 
   ############################
   # Download stack
@@ -86,8 +89,6 @@ services:
     volumes:
       - ./sonarr/config:/config
       - ./downloads:/downloads
-    ports:
-      - 8989:8989
     depends_on:
       - prowlarr
     restart: unless-stopped
@@ -110,6 +111,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
+      - RADARR_METRICS=true
     volumes:
       - ./radarr/config:/config
       - ./downloads:/downloads
@@ -169,7 +171,6 @@ services:
       - ./transmission/torrents:/torrents
       - ./downloads:/downloads
     ports:
-      - 9091:9091
       - 51413:51413
       - 51413:51413/udp
     restart: unless-stopped
@@ -183,3 +184,76 @@ services:
       interval: 1m
       timeout: 10s
       retries: 3
+  ###################
+  # MONITORING STACK
+  #################
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.localhost`)"
+      - "traefik.http.routers.prometheus.entrypoints=web"
+      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=Root123
+    depends_on:
+      - prometheus
+    volumes:
+      - ./grafana/config:/etc/grafana
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`grafana.localhost`)"
+      - "traefik.http.routers.prometheus.entrypoints=web"
+      - "traefik.http.services.prometheus.loadbalancer.server.port=3000"
+  #################
+  # ARR AND OTHER EXPORTERS
+  ###############
+  sonarr-exporter:
+    image: ghcr.io/onedr0p/exportarr:latest
+    container_name: sonarre
+    command: ["sonarr"]
+    environment:
+      PORT: 9707
+      URL: "http://sonarr:8989"
+      APIKEY: "6fb7dfa755e3470e866a3ae28a8ad153"
+    ports:
+      - "9707:9707"
+  radarr-exporter:
+    image: ghcr.io/onedr0p/exportarr:latest
+    container_name: radarre
+    command: ["radarr"]
+    environment:
+      PORT: 9708
+      URL: "http://radarr:7878"
+      APIKEY: "4beaf472f9714540b959140b5ae4fccc"
+    ports:
+      - "9708:9708"
+  lidarr-exporter:
+    image: ghcr.io/onedr0p/exportarr:latest
+    container_name: lidarre
+    command: ["lidarr"]
+    environment:
+      PORT: 9709
+      URL: "http://lidarr:8686"
+      APIKEY: "8e4a02baae5d4f42a7fe4fb0252a6e5d"
+    ports:
+      - "9709:9709"
+  transmission-exporter:
+    image: metalmatze/transmission-exporter
+    container_name: transmissione
+    restart: unless-stopped
+    links:
+      - transmission
+    ports:
+      - "19091:19091"
+    environment:
+      TRANSMISSION_ADDR: http://transmission:9091

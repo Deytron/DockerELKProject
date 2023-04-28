@@ -73,3 +73,9 @@ Si vous voulez télécharger un film :
 # Compose bonus
 
 Un fichier `docker-compose-bonus.yml` est présent, il ouvre un serveur Pokemon Showdown et un serveur CS:GO. La raison de sa présence est surtout du bonus, Mattéo en voulait pas
+
+# Monitoring
+
+Une stack de monitoring via Prometheus et Grafana vient d'être ajoutée, elle permet via les différents exporters présents dans le compose file, de pouvoir voir l'état de tous les services.
+
+Pour voir le dashboard de surveillance, rendez-vous sur `grafana.localhost`
