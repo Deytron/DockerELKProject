@@ -69,3 +69,7 @@ Si vous voulez télécharger un film :
 10. Paramétrez la bibliothèque **Films** vers le chemin `/movies`
 11. ...
 12. Profit !
+
+# Compose bonus
+
+Un fichier `docker-compose-bonus.yml` est présent, il ouvre un serveur Pokemon Showdown et un serveur CS:GO. La raison de sa présence est surtout du bonus, Mattéo en voulait pas
